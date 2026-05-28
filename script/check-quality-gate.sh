@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 source "$(dirname "$0")/common.sh"
 
 if [[ -z "${SONAR_TOKEN}" ]]; then
@@ -9,7 +8,7 @@ fi
 
 metadataFile="$1"
 pollingTimeoutSec="$2"
-
+set -x
 
 if [[ ! -f "$metadataFile" ]]; then
    echo "$metadataFile does not exist."
